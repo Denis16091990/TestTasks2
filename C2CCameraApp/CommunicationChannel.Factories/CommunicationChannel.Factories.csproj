@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommunicationChannel.Abstaction\CommunicationChannel.Abstaction.csproj" />
+    <ProjectReference Include="..\СommunicationChannel.Implementation\СommunicationChannel.Implementation.csproj" />
+  </ItemGroup>
+
+</Project>

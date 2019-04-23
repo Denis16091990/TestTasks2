@@ -1,0 +1,41 @@
+<div class="list">
+  <div class="title">Verivox table</div>
+  <div class="list-filters" [formGroup]="filtersForm">
+    <div class="filter-wrapper">
+      <div>Name filter</div>
+      <input type="text" max="50" formControlName="name"/>
+    </div>
+    <div class="filter-wrapper">
+      <div>Speed filter</div>
+      <input type="text" max="50" formControlName="downloadSpeed"/>
+    </div>
+    <div class="filter-wrapper">
+      <div>Price filter</div>
+      <input type="text" max="50" formControlName="price"/>
+    </div>
+    <div>
+      <div>
+        <div [class.active]="isActiveSort('price', 'asc')" (click)="sortPrice('asc', 'price')">&uarr; price</div>
+        <div [class.active]="isActiveSort('price', 'desc')" (click)="sortPrice('desc', 'price')">&darr; price</div>
+      </div>
+      <div>
+        <div [class.active]="isActiveSort('name', 'asc')" (click)="sortPrice('asc', 'name')">&uarr; name</div>
+        <div [class.active]="isActiveSort('name', 'desc')" (click)="sortPrice('desc', 'name')">&darr; name</div>
+      </div>
+    </div>
+  </div>
+  <div class="list-table">
+    <div class="list-element" *ngFor="let item of tariffs$ | async; let i = index">
+      <div class="element-number">{{ i }}</div>
+      <div class="element-name">{{ item.name }}</div>
+      <app-traffic-speed [tariffData]="item"></app-traffic-speed>
+      <div class="element-benefits">
+        <div class="element-benefit" *ngFor="let benefit of item.benefits">{{ benefit  }}</div>
+      </div>
+      <div class="element-price-action">
+        <div class="element-price">{{ item.price | currency:'€' }}</div>
+        <button class="element-decide"><span>To tariff </span>></button>
+      </div>
+    </div>
+  </div>
+</div>

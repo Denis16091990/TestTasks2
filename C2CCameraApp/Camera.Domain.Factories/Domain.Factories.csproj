@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Camera.Domain.Abstractions\Domain.Abstractions.csproj" />
+    <ProjectReference Include="..\Camera.Domain.Impl\Domain.Impl.csproj" />
+  </ItemGroup>
+
+</Project>

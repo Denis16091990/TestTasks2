@@ -1,0 +1,126 @@
+.title {
+  color: #111;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 75px; font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: right;
+}
+
+.list {
+  padding: 30px;
+  min-height: 100%;
+
+  &-table {
+  }
+
+  &-element {
+    background: #ffed63;
+    margin: 20px 0;
+    display: flex;
+  }
+  &-filters {
+    display: flex;
+  }
+}
+
+.element {
+
+ &-number {
+   width: 20px;
+   text-align: center;
+   border-right: black 1px solid;
+   padding: 80px 0;
+ }
+
+  &-name {
+    padding: 40px 0 0 5%;
+    width: 50px;
+  }
+
+  &-speed {
+    padding-left: 80px;
+  }
+
+  &-benefits {
+    display: block;
+    margin: 70px 0 0 20%;
+  }
+
+  &-benefit {
+    padding-bottom: 20px;
+    &::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: black;
+      border-radius: 50%;
+    }
+  }
+  &-price {
+    margin: 60px 0 0 20%;
+  }
+  &-decide {
+    margin: 30px 0 0 20%;
+    width: 180px;
+    height: 50px;
+    background-color: ghostwhite;
+    border: 1px grey solid;
+  }
+}
+
+input {
+
+  margin-top: 9px;
+  padding: 14px 24px 14px 12px;
+  border: 1px solid gray;
+  background: gainsboro no-repeat right 6px center;
+
+  &:hover:not(:focus) {
+    cursor: pointer;
+
+    border-bottom-color: white;
+  }
+
+  &::placeholder {
+    color: #b3b2b1;
+  }
+}
+
+.filter-wrapper {
+  display: block;
+  margin-right: 30px;
+
+  div {
+    color: #111;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 32px;
+  }
+}
+.active {
+  color: #3678ff;
+}
+
+@media (min-width: 720px) and (max-width: 1279px) {
+  .element {
+    &-benefits {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 719px) {
+  .element {
+    &-benefits {
+      display: none;
+    }
+    &-decide {
+      span {
+        display: none;
+      }
+      width: 15px;
+    }
+  }
+}
